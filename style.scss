@@ -1,0 +1,207 @@
+$primary: #022929;
+$info: #066666;
+$background-color: #1e3a3a;
+$nav-border-color: #055252;
+@font-face {font-family: Showcard Gothic; src: url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.eot"); src: url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.woff") format("woff"), url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/d66fa62dabed66f2226a1b2d17da0579.svg#Showcard Gothic") format("svg"); }
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+.header {
+  background-color: $primary;
+  color: #ffffff;
+
+  .navbar{
+    padding-bottom: 0;
+    .navbar-toggler {
+      background-color: $info !important;
+      border-radius: 0 !important;
+      margin-top: -78px;
+      margin-left: auto;
+    }
+    .navbar-collapse {
+      .row {
+        margin-right: -16px;
+        margin-left: -16px;
+      }
+    }
+
+    .dropdown-menu {
+      margin: 0;
+      border: unset;
+      border-radius: 0;
+      background-color: #066666;
+      padding: 8px 0;
+
+      .dropdown-item {
+        color: #ffffff;
+        font-family: Tahoma;
+        font-size: 12px;
+        padding: 4px 12px;
+        &:hover {
+          background-color: #616f6f;
+        }
+      }
+
+      .dropdown-divider {
+        width: 95%;
+        margin: 2px auto;
+      }
+    }
+
+  }
+  .navbar-brand {
+    background-color: $info;
+    color: white;
+    font-family: "Showcard Gothic";
+    margin-top: 0.75rem;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
+  .logo {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    padding: 0;
+    left: 0;
+    top: 54px;
+    position: absolute;
+    font-family: Showcard Gothic;
+  }
+
+  .nav-item {
+   .nav-link {
+     color: #ffffff;
+     font-family: Tahoma;
+     font-size: 14px;
+     font-weight: bold;
+   }
+    background-color: $info;
+    margin: 0 1px;
+    padding: 0 16px;
+  }
+}
+footer {
+  background-color: $info;
+  color: #ffffff;
+  font-family: Tahoma;
+  font-size: 14px;
+  padding: .5rem 1rem;
+  display: flex !important;
+  justify-content: space-between !important;
+  a {
+    color: #ffffff;
+    padding: 0 0.5rem;
+    text-decoration: underline;
+    &:hover {
+      color: $background-color;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .footer {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+  }
+  .copyright {
+  }
+  .footer-categories {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+  }
+}
+
+.content {
+  .row{
+    margin: 0;
+    min-height: calc(100vh - 156px);
+
+
+    .left-column {
+      background-color: $background-color;
+      color: #ffffff;
+      border: 15px solid $info;
+      h1 {
+        font-family: Verdana;
+        padding-left: 8px;
+      }
+
+      hr {
+        border-top-color: black;
+        background-color: #616f6f;
+        height: 1px;      }
+
+      p {
+        padding-left: 8px;
+        font-family: Tahoma;
+        font-size: 14px;
+        text-indent: 2.5rem;
+      }
+    }
+
+    .right-column {
+      background-color: $primary;
+      border: 15px solid $nav-border-color;
+      color: #ffffff;
+
+      .social-icons {
+        i {
+          background-color: #848484;
+          color: white;
+          padding: 0.5rem;
+        }
+      }
+
+      .article-categories {
+        a {
+          color: #ffffff;
+          text-decoration: underline;
+          &:hover {
+            color: #616f6f;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.container {
+  max-width: 1280px !important;
+
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .container {
+    padding: 0 36px !important;
+  }
+}
+
+.carousel-indicators {
+  margin: 0;
+  position: relative !important;
+  li {
+    width: 5px !important;
+    height: 5px !important;
+    border-radius: 50%;
+  }
+}
+
+.carousel-inner {
+  .carousel-item {
+   img {
+     height: 220px;
+     width: 100%;
+     object-fit: contain;
+   }
+  }
+  .active, .carousel-item-left {
+    display: flex !important;
+    align-items: center !important;
+  }
+}
